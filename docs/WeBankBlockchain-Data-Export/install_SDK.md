@@ -1,6 +1,6 @@
-## SDK-快速开始
+### SDK-快速开始
 
-### 1. 前置依赖
+#### 1. 前置依赖
 
 在使用本组件前，请确认系统环境已安装相关依赖软件，清单如下：
 
@@ -14,11 +14,11 @@
 | zookeeper | >= zookeeper[3.4] | 只有在进行集群部署的时候需要安装|
 
 
-### 2. 部署步骤
+#### 2. 部署步骤
 
-#### 引入数据导出SDK依赖 
+##### 引入数据导出SDK依赖 
 
-##### 在java项目的build.gradle中引入如下Maven库
+###### 在java项目的build.gradle中引入如下Maven库
 ```
 allprojects {
 		repositories {
@@ -27,7 +27,7 @@ allprojects {
 		}
 	}
 ```
-##### 建立依赖
+###### 建立依赖
 ```
 dependencies {
 	implementation 'com.github.WeBankBlockchain:Data-Export:DataExport-SDK-Beta-SNAPSHOT'
@@ -35,9 +35,9 @@ dependencies {
 ```
 
 
-### 3. SDK调用
+#### 3. SDK调用
 
-#### 单库基础数据导出使用例子如下（默认导出配置）：
+##### 单库基础数据导出使用例子如下（默认导出配置）：
 ```
 MysqlDataSource mysqlDataSourc = MysqlDataSource.builder()
         .jdbcUrl("jdbc:mysql://[ip]:[port]/[database]")
@@ -60,7 +60,7 @@ ExportDataSDK.start(exportExecutor);
 ```
 
 
-#### 分库分表基础数据导出使用例子如下（默认导出配置）：
+##### 分库分表基础数据导出使用例子如下（默认导出配置）：
 ```
 MysqlDataSource mysqlDataSourc = MysqlDataSource.builder()
         .jdbcUrl("jdbc:mysql://[ip]:[port]/[database]")
